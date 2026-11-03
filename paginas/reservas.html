@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+</head>
+
+    <h3>Horarios de Atencion</h3>
+<p> En Rueda Libre nos preocupamos por la intergridad de nuestros usuarios por esto estamos disponibles de 7:00a.m. a 6:00p.m. los lunes a martes y de miercoles a viernes de 11 am a 8 pm estamos comprometidos con ustedes y por esto trabajamos festivos</p>
+<style>
+table, th, th, td {
+    border: 1px solid rgb(67, 227, 10);
+}
+</style>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Dias Disponibles</th>
+                <th scope="col">Lunes</th>
+                <th scope="col">Martes</th>
+                <th scope="col">Miercoles</th>
+                <th scope="col">Jueves</th>
+                <th scope="col">Viernes</th>
+                
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row">Apertura</th>
+                <td>7:00 a.m</td>
+                <td>7:00 a.m</td>
+                <td>11:00 a.m</td>
+                <td>11:00 a.m</td>
+                <td>11:00 a.m</td>
+            </tr>
+
+            
+                <th scope="row">Cierre</th>
+                <td>6:00 p.m</td>
+                <td>6:00 p.m</td>
+                <td>8:00 p.m</td>
+                <td>8:00 p.m</td>
+                <td>8:00 p.m</td>
+    
+
+        </tbody>
+
+    </table>
+
+    <h2>Formulario de reserva</h2>
+    <form action="procesar_reserva.php" method="post">
+        <fieldset>
+            <legend>Tus datos</legend>
+            <div>
+                <label for="nombre">nombre completo</label><br>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <br>
+            <div>
+                <label for="documento">Numero de Documento</label><br>
+                <input type="text" id="documento" name="documento" required>
+            </div>
+            <br>
+            <div>
+                <label for="email"> Correo Electronico</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br>
+            <div>
+                <label for="celular">Numero de celular</label><br>
+                <input type="tel" id="celular" name="celular" required>
+            </div>
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend> Tu alquiler</legend>
+            <div>
+                <label for="Fecha de alquiler"> Fecha de alquiler</label><br> 
+                <input type="date" id="Fecha" name="fecha" required>
+            </div>
+            <br>
+            <div>
+                <label for="tipo_bicileta">Tipo de bicicleta</label>
+                <select id="tipo_bicicleta" name="tipo_bicicleta" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="urbana">Urbana</option>
+                    <option value="montana">Montaña</option>
+                    <option value="electrica">Eléctrica</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="plan">Plan de alquiler</label>
+                <select id="plan" name="plan " required>
+                    <option value=""Seleccione una opción</option>
+                        <option value="1_hora">1 Hora</option>
+                        <option value="medio_dia">Medio Día</option>
+                        <option value="dia_completo">Día completo</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="cantidad">Cantidad de bicicletas</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+
+            </div>
+            <br>
+            <div>
+                <label for="recorridos">Recorridos</label>
+                <select id="recorridos" name="recorridos" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="ninguna_ruta">Ninguna ruta</option>
+                    <option value="ruta_1">Ruta 1</option>
+                    <option value="ruta_2">Ruta 2</option>
+                    <option value="ruta_3">Ruta 3</option>
+                </select>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Confirmación</legend>
+            <div>
+                <label for="comentarios">Comentarios adicionales</label><br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" id="confirmacion" name="confirmacion" required>
+                <label for="confirmacion">Confirmo que los datos proporcionados son correctos y acepto los términos y condiciones.</label>
+            </div>
+    </form>
+                                                                                                                                                
+    
+     <hr>
+    <footer>
+        <p>Rueda Libre | ruedalibre123@gmail.com | 2026</p>
+        <p>Copyright © 2024 Rueda Libre. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
